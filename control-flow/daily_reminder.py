@@ -13,9 +13,15 @@ match priority :
     case _:
         reminder = f"'{task}' has unknown priority"
 if time_bound == "yes" :
-    reminder+= " that requires immediate attention today!"
+    if priority in ['high','medium']:
+        reminder+= " that requires immediate attention today!"
+    else :
+        reminder += "."
 elif time_bound == "no":
-    reminder += ". Consider completing it when you have free time."
+    if priority == 'low' :
+        reminder += ". Consider completing it when you have free time."
+    else:
+        reminder += "."
     
 print(reminder)
         
