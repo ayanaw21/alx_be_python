@@ -23,6 +23,8 @@ elif time_bound == "no":
     else:
         reminder += "."
     
-print(reminder)
-        
+if time_bound == 'yes':
+    print(f"Reminder: {reminder}")
+else :
+    print(f"Note: {reminder}")
         
