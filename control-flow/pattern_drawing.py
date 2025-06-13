@@ -7,5 +7,4 @@ while row_count < size:
     row_count += 1
 
 
-
-    
+  
